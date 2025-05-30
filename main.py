@@ -23,14 +23,6 @@ for _, row in df.iterrows():
     context = {
         "first_name": row["First Name"],
         "last_name": row["Last Name"],
-        "email": row["Email"],
-        "phone_number": row["Phone Number"],
-        "city_state": row["City"],
-        "college_name": row["College Name"],
-        "college_year": row["College Year"],
-        "linkedin": row["LinkedIn Profile"],
-        "github": row["Github Profile"],
-        "interested_domain": row["Interested Domain"]
     }
     filename = f"Offer_Letter_{row['First Name']}_{row['Last Name']}.docx".replace(" ", "_")
     filepath = os.path.join(docx_output_dir, filename)
